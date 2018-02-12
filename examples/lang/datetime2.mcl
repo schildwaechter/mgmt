@@ -1,3 +1,5 @@
+file "/tmp/mgmt/" { }
+
 $secplusone = datetime() + $ayear
 
 # note the order of the assignment (year can come later in the code)

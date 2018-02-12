@@ -13,6 +13,7 @@ $set = schedule("xsched", $opts)
 # and if you want, you can omit the options entirely:
 #$set = schedule("xsched")
 
+file "/tmp/mgmt/" { }
 file "/tmp/mgmt/scheduled-${hostname()}" {
 	content => template("set: {{ . }}\n", $set),
 }

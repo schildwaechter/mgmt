@@ -1,3 +1,4 @@
+file "/tmp/mgmt/" { }
 file "/tmp/mgmt/${hostname()}" {
 	content => "hello from ${hostname()}!\n",
 	state => "exists",

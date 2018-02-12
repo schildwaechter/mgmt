@@ -9,6 +9,7 @@ $theload = structlookup(load(), "x1")
 
 $vumeter = vumeter("====", 10, 0.9)
 
+file "/tmp/mgmt/" { }
 file "/tmp/mgmt/datetime" {
 	content => template("Now + 1 year is: {{ .year }} seconds, aka: {{ datetimeprint .year }}\n\nload average: {{ .load }}\n\nvu: {{ .vumeter }}\n", $tmplvalues),
 }

@@ -1,3 +1,4 @@
+file "/tmp/mgmt/" { }
 file "/tmp/mgmt/systemload" {
 	content => template("load average: {{ .load }} threshold: {{ .threshold }}\n", $tmplvalues),
 }

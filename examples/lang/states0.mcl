@@ -3,6 +3,8 @@ $exchanged = kvlookup($ns)
 
 $state = maplookup($exchanged, $hostname, "default")
 
+file "/tmp/mgmt/" { }
+
 if $state == "one" || $state == "default" {
 
 	file "/tmp/mgmt/state" {
